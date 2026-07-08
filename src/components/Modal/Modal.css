@@ -1,0 +1,173 @@
+/* Кнопка для відкриття модального вікна */
+.modal-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+}
+
+.modal-button:hover {
+  background: #e8e8e8;
+  border-color: #bbb;
+}
+
+.modal-button:active {
+  background: #ddd;
+}
+
+/* Фон модального вікна (backdrop) */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Вміст модального вікна */
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 450px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок модального вікна */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Кнопка закриття */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  border-radius: 4px;
+}
+
+.close-button:hover {
+  color: #333;
+  background: #efefef;
+}
+
+/* Тіло модального вікна */
+.modal-body {
+  padding: 16px;
+  color: #555;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.modal-body p {
+  margin: 0 0 12px 0;
+}
+
+.modal-body ul {
+  margin: 8px 0;
+  padding-left: 18px;
+}
+
+.modal-body li {
+  margin: 6px 0;
+}
+
+.modal-body strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Підвал модального вікна */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Кнопки */
+.btn-primary,
+.btn-secondary {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  color: #333;
+}
+
+.btn-primary {
+  background: #e8e8e8;
+  border-color: #ccc;
+}
+
+.btn-primary:hover {
+  background: #ddd;
+  border-color: #aaa;
+}
+
+.btn-secondary {
+  background: white;
+}
+
+.btn-secondary:hover {
+  background: #f5f5f5;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
